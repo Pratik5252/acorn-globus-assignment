@@ -7,8 +7,6 @@
   },
 
   "kpiCards": [
-    { "id": "top_sales", "title": "Top sales", "value": "72", "subtitle": "Mikasa" },
-    { "id": "best_deal", "title": "Best deal", "value": "$42,300", "subtitle": "Ralf Inc.", "starred": true },
     { "id": "deals", "title": "Deals", "value": "5", "change": -5 },
     { "id": "value", "title": "Value", "value": "$29k", "change": 7.9, "highlighted": true },
     { "id": "win_rate", "title": "Win rate", "value": "44%", "change": 1.2 }
@@ -107,6 +105,7 @@
     { "name": "Medium", "percentage": 5.4, "value": 8476 },
     { "name": "Other", "percentage": 7.1, "value": 11135 }
   ],
+
   "salesDynamic": [
     { "week": "W1", "value": 0.3 },
     { "week": "W2", "value": 0.4 },
@@ -120,6 +119,7 @@
     { "week": "W10", "value": 0.75 },
     { "week": "W11", "value": 0.8 }
   ],
+
   "platformValue": [
     {
       "platform": "Dribbble",
@@ -132,6 +132,7 @@
       }
     }
   ],
+  
   "revenueStats": [
     {
       "id": "drs1",
