@@ -1,0 +1,114 @@
+{
+  "revenue": {
+    "total": 528976.82,
+    "change": { "percentage": 7.9, "amount": 27335.0 },
+    "previousTotal": 501641.73,
+    "comparisonPeriod": "Jun 1 - Aug 31, 2023"
+  },
+  "users": [
+    {
+      "id": 1,
+      "name": "Armin A.",
+      "avatar": "/avatars/armin.jpg",
+      "sales": 41,
+      "revenue": 209633,
+      "leads": 118,
+      "kpi": 0.84,
+      "winRate": "31%",
+      "closed": 12,
+      "pending": 29,
+      "badges": [],
+      "highlight": { "rank": 1, "bonus": 209633 },
+      "percentage": 39.6
+    },
+    {
+      "id": 2,
+      "name": "Mikasa A.",
+      "avatar": "/avatars/mikasa.jpg",
+      "sales": 57,
+      "revenue": 156841,
+      "leads": 103,
+      "kpi": 0.89,
+      "winRate": "39%",
+      "closed": 21,
+      "pending": 33,
+      "badges": ["Top sales 🔥", "Sales streak 🔥", "Top review ⭐"],
+      "highlight": { "rank": 3, "bonus": 156841 },
+      "percentage": 29.6
+    },
+    {
+      "id": 3,
+      "name": "Eren Y.",
+      "avatar": "/avatars/eren.jpg",
+      "sales": 22,
+      "revenue": 117115,
+      "leads": 84,
+      "kpi": 0.79,
+      "winRate": "32%",
+      "closed": 7,
+      "pending": 15,
+      "badges": [],
+      "highlight": { "rank": 2, "bonus": 117115 },
+      "percentage": 22.1
+    }
+  ],
+
+  "platforms": [
+    { "name": "Dribbble", "icon": "dribbble", "revenue": 227459, "percentage": 43 },
+    { "name": "Instagram", "icon": "instagram",  "revenue": 142823, "percentage": 27 },
+    { "name": "Behance", "icon": "behance", "revenue": 89935, "percentage": 11 },
+    { "name": "Google", "icon": "google", "revenue": 37028, "percentage": 7 }
+  ],
+
+  "platformDistribution": [
+    { "name": "Dribbble", "percentage": 45.3, "value": 71048 },
+    { "name": "Instagram", "percentage": 28.1, "value": 44072 },
+    { "name": "Google", "percentage": 14.1, "value": 22114 },
+    { "name": "Medium", "percentage": 5.4, "value": 8476 },
+    { "name": "Other", "percentage": 7.1, "value": 11135 }
+  ],
+  "salesDynamic": [
+    { "week": "W1", "value": 0.3 },
+    { "week": "W2", "value": 0.4 },
+    { "week": "W3", "value": 0.35 },
+    { "week": "W4", "value": 0.5 },
+    { "week": "W5", "value": 0.45 },
+    { "week": "W6", "value": 0.6 },
+    { "week": "W7", "value": 0.55 },
+    { "week": "W8", "value": 0.7 },
+    { "week": "W9", "value": 0.65 },
+    { "week": "W10", "value": 0.75 },
+    { "week": "W11", "value": 0.8 }
+  ],
+  "paltformValue":[
+    {
+        "platform": "Dribbble", 
+        "details": {
+            "monthly_revenue": 18552,
+            "winPercentage": 16,
+            "winLoss": "51/318",
+            "leads": 373
+        }
+    }
+  ],
+  "revenueStats": {
+    "dribbble": {
+        "September": [
+            {"userId": 1, "amount": 6901},
+            {"userId": 2, "amount": 5300},
+            {"userId": 3, "amount": 2000}
+        ],
+        "October": [
+            {"userId": 1, "amount": 11035},
+            {"userId": 2, "amount": 7700},
+            {"userId": 3, "amount": 5200}
+        ],
+        "November": [
+            {"userId": 1, "amount": 9288},
+            {"userId": 2, "amount": 5800},
+            {"userId": 3, "amount": 7500}
+        ]
+    }
+  }
+
+}
