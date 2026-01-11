@@ -26,8 +26,8 @@ export interface UserHighlight {
 
 export interface User {
   id: number;
-  name: string;
-  avatar: string | null;
+  name: string | undefined;
+  avatar: string | undefined;
   sales: number | null;
   revenue: number;
   leads: number | null;
