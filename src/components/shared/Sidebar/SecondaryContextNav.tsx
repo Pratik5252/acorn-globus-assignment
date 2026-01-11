@@ -29,7 +29,7 @@ import {type SectionData,sections,filterItems,mainNavItems} from '../../../const
 
 const CollapsibleSection = ({ title, items }: SectionData) => (
   <SidebarGroup>
-    <SidebarGroupLabel className="flex items-center justify-between text-primary text-sm">
+    <SidebarGroupLabel className="flex items-center justify-between text-primary text-xs">
       {title}
       <SidebarGroupAction className="bg-secondary">
         <Plus className="w-4 h-4 text-muted-foreground" />
@@ -51,9 +51,9 @@ const CollapsibleSection = ({ title, items }: SectionData) => (
                     >
                       <SidebarMenuSubItem>
                         <CollapsibleTrigger asChild>
-                          <SidebarMenuSubButton className="relative cursor-pointer overflow-visible">
+                          <SidebarMenuSubButton size="sm" className="relative cursor-pointer overflow-visible">
                             <div className="z-10 absolute w-3 h-[1px] top-1/2 -left-2.5 border-t border-border-2"/>
-                            <span>{item.title}</span>
+                            <span className="text-foreground">{item.title}</span>
                             <ChevronDown className="text-muted-foreground! ml-auto w-3 h-3 transition-transform group-data-[state=open]/nested:rotate-180" />
                           </SidebarMenuSubButton>
                         </CollapsibleTrigger>
@@ -61,7 +61,7 @@ const CollapsibleSection = ({ title, items }: SectionData) => (
                           <SidebarMenuSub className="pr-0 mr-0 ml-2 border-border-2 overflow-hidden">
                             {item.subItems?.map((subItem) => (
                               <SidebarMenuSubItem key={subItem.title}>
-                                <SidebarMenuSubButton
+                                <SidebarMenuSubButton size="sm"
                                   asChild
                                   className="justify-between relative overflow-visible"
                                 >
@@ -69,7 +69,7 @@ const CollapsibleSection = ({ title, items }: SectionData) => (
                                     href={subItem.url}
                                   >
                                     <div className="z-10 absolute w-3 h-[1px] top-1/2 -left-2.5 border-t border-border-2"/>
-                                    <span className={subItem.isHighlighted ? "text-accent" : ""}>{subItem.title}</span>
+                                    <span className={subItem.isActive ? "text-accent" : ""}>{subItem.title}</span>
                                     {subItem.badge && (
                                       <SidebarMenuBadge className="bg-accent text-white text-xs rounded-sm px-1.5">
                                         {subItem.badge}
@@ -85,8 +85,8 @@ const CollapsibleSection = ({ title, items }: SectionData) => (
                     </Collapsible>
                   ) : (
                     <SidebarMenuSubItem key={item.title} >
-                      <SidebarMenuSubButton asChild className="relative overflow-visible">
-                        <a href={item.url}>
+                      <SidebarMenuSubButton size="sm" asChild className="relative overflow-visible">
+                        <a href={item.url} className="text-foreground">
                             <div className="z-10 absolute w-3 h-[1px] top-1/2 -left-2.5 border-t border-border-2"/>
                             {item.title}</a>
                       </SidebarMenuSubButton>
@@ -105,8 +105,8 @@ const CollapsibleSection = ({ title, items }: SectionData) => (
 const SecondaryContextNav = () => {
   return (
     <Sidebar collapsible="none" className="hidden flex-1 md:flex">
-      <SidebarHeader className="p-4 py-8">
-        <button className="flex items-center gap-1 font-semibold text-base hover:opacity-80 transition-opacity">
+      <SidebarHeader className="p-4 py-6">
+        <button className="flex items-center gap-1 font-semibold text-sm hover:opacity-80 transition-opacity">
           Codename.com
           <ChevronDown className="w-4 h-4 text-muted-foreground inline-block ml-1" />
         </button>
@@ -118,7 +118,7 @@ const SecondaryContextNav = () => {
             <SidebarMenu>
               {filterItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors py-0">
+                  <SidebarMenuButton size="sm" className="flex items-center text-muted-foreground hover:text-foreground transition-colors py-0">
                     <div className="flex items-center gap-2">
                       <item.icon className="w-4 h-4" />
                       <span>{item.title}</span>
@@ -135,7 +135,7 @@ const SecondaryContextNav = () => {
             <SidebarMenu>
               {mainNavItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild className="py-0">
+                  <SidebarMenuButton size="sm" asChild className="py-0">
                     <a href={item.url}>
                       <span>{item.title}</span>
                     </a>
@@ -156,7 +156,7 @@ const SecondaryContextNav = () => {
 
         <SidebarGroup className="py-3">
           <SidebarGroupContent>
-            <button className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <button className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors">
               <FileStack className="w-4 h-4" />
               Manage folders
             </button>
