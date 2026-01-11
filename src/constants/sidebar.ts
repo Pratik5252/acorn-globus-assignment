@@ -18,7 +18,7 @@ export type SubItem = {
   title: string;
   url: string;
   badge?: string;
-  isHighlighted?: boolean;
+  isActive?: boolean;
 };
 
 export type CollapsibleItem = {
@@ -64,18 +64,18 @@ export const reportsItems: CollapsibleItem[] = [
     title: "Share with me",
     isCollapsible: true,
     subItems: [
-      { title: "Deals by user", url: "#", isHighlighted: false },
-      { title: "Deal duration", url: "#", isHighlighted: false },
+      { title: "Deals by user", url: "#", isActive: false },
+      { title: "Deal duration", url: "#", isActive: false },
     ],
   },
   {
     title: "My reports",
     isCollapsible: true,
     subItems: [
-      { title: "Emails received", url: "#", isHighlighted: false },
-      { title: "Deal duration", url: "#", isHighlighted: false },
-      { title: "New report", url: "#", isHighlighted: true },
-      { title: "Analytics", url: "#", isHighlighted: false, badge: "7" },
+      { title: "Emails received", url: "#", isActive: false },
+      { title: "Deal duration", url: "#", isActive: false },
+      { title: "New report", url: "#", isActive: true },
+      { title: "Analytics", url: "#", isActive: false, badge: "7" },
     ],
   },
 ];
