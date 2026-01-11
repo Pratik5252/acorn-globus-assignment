@@ -7,8 +7,8 @@
   },
 
   "kpiCards": [
-    { "id": "deals", "title": "Deals", "value": "5", "change": -5 },
-    { "id": "value", "title": "Value", "value": "$29k", "change": 7.9, "highlighted": true },
+    { "id": "deals", "title": "Deals", "value": "256", "change": -5 },
+    { "id": "value", "title": "Value", "value": "$528k", "change": 7.9, "highlighted": true },
     { "id": "win_rate", "title": "Win rate", "value": "44%", "change": 1.2 }
   ],
 
@@ -16,7 +16,7 @@
     {
       "id": 1,
       "name": "Armin A.",
-      "avatar": "/avatars/armin.jpg",
+      "avatar": "https://randomuser.me/api/portraits/med/men/65.jpg",
       "sales": 41,
       "revenue": 209633,
       "leads": 118,
@@ -30,23 +30,8 @@
     },
     {
       "id": 2,
-      "name": "Mikasa A.",
-      "avatar": "/avatars/mikasa.jpg",
-      "sales": 57,
-      "revenue": 156841,
-      "leads": 103,
-      "kpi": 0.89,
-      "winRate": "39%",
-      "closed": 21,
-      "pending": 33,
-      "badges": ["Top sales 🔥", "Sales streak 🔥", "Top review ⭐"],
-      "highlight": { "rank": 3, "bonus": 156841 },
-      "percentage": 29.6
-    },
-    {
-      "id": 3,
       "name": "Eren Y.",
-      "avatar": "/avatars/eren.jpg",
+      "avatar": "https://randomuser.me/api/portraits/med/men/55.jpg",
       "sales": 22,
       "revenue": 117115,
       "leads": 84,
@@ -59,9 +44,24 @@
       "percentage": 22.1
     },
     {
+      "id": 3,
+      "name": "Mikasa A.",
+      "avatar": "https://randomuser.me/api/portraits/med/men/75.jpg",
+      "sales": 57,
+      "revenue": 156841,
+      "leads": 103,
+      "kpi": 0.89,
+      "winRate": "39%",
+      "closed": 21,
+      "pending": 33,
+      "badges": ["Top sales 🔥", "Sales streak 🔥", "Top review ⭐"],
+      "highlight": { "rank": 3, "bonus": 156841 },
+      "percentage": 29.6
+    },
+    {
       "id": 4,
-      "name": "Team",
-      "avatar": null,
+      "name": "",
+      "avatar": "/icons/logo.svg",
       "isTeam": true,
       "sales": null,
       "revenue": 45386,
