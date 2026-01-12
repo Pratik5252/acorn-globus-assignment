@@ -94,14 +94,14 @@ const TopStats = () => {
         </div>
       </div>
 
-      <div className="flex items-stretch overflow-hidden gap-2">
+      <div className="flex items-stretch gap-2">
         {kpiCards.map((card, index) => {
           const isHighlighted = card.highlighted;
 
           return (
             <div
               key={card.id}
-              className={`w-[80px] h-fit p-2 flex flex-col items-center justify-between rounded-md border-2 gap-1.5 font-hubot font-medium ${
+              className={`w-[80px] h-fit p-2 flex flex-col items-center justify-between rounded-lg border-2 gap-1.5 font-hubot font-medium shadow-xs ${
                 isHighlighted ? "bg-none text-foreground border-accent" : "bg-card-2 border-border-2/50"
               }`}
             >
