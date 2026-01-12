@@ -137,17 +137,17 @@
     {
       "id": "drs1",
       "months": {
-        "September": [
+        "Sep": [
           { "userId": 1, "amount": 6901 },
           { "userId": 2, "amount": 5300 },
           { "userId": 3, "amount": 2000 }
         ],
-        "October": [
+        "Oct": [
           { "userId": 1, "amount": 11035 },
           { "userId": 2, "amount": 7700 },
           { "userId": 3, "amount": 5200 }
         ],
-        "November": [
+        "Nov": [
           { "userId": 1, "amount": 9288 },
           { "userId": 2, "amount": 5800 },
           { "userId": 3, "amount": 7500 }
