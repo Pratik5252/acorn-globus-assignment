@@ -100,7 +100,7 @@ const DealsAmountChart = () => {
     <div className="w-full bg-card flex flex-col h-fit rounded-4xl p-4 border border-border-2/20 shadow-xs">
       <div className="flex items-center justify-between">
         <button className="flex items-center gap-1.5 text-foreground hover:bg-black/5 p-1 rounded-md transition-colors ml-1">
-          <AlignLeft className="w-5 h-5" />
+          <AlignLeft className="w-5 h-5 -rotate-90" />
           <ChevronDown className="w-4 h-4 ml-0.5" />
         </button>
 
