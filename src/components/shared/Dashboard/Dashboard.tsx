@@ -1,6 +1,8 @@
 import TopBar from './TopBar'
 import TopSection from './TopSection'
 import TopStats from './TopStats'
+import ContributionGraph from './ContributionGraph'
+import ReportAnalytics from './ReportAnalytics/ReportAnalytics'
 
 const Dashboard = () => {
   return (
@@ -8,6 +10,8 @@ const Dashboard = () => {
         <TopBar/>
         <TopSection/>
         <TopStats/>
+        <ContributionGraph/>
+        <ReportAnalytics/>
     </div> 
   )
 }
