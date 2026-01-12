@@ -79,23 +79,23 @@
   "platforms": [
     {
       "name": "Dribbble",
-      "icon": "dribbble",
+      "icon": "/icons/dribbble.svg",
       "revenue": 227459,
       "percentage": 43
     },
     {
       "name": "Instagram",
-      "icon": "instagram",
+      "icon": "/icons/instagram.svg",
       "revenue": 142823,
       "percentage": 27
     },
     {
       "name": "Behance",
-      "icon": "behance",
+      "icon": "/icons/behance.svg",
       "revenue": 89935,
       "percentage": 11
     },
-    { "name": "Google", "icon": "google", "revenue": 37028, "percentage": 7 }
+    { "name": "Google", "icon": "/icons/google.svg", "revenue": 37028, "percentage": 7 }
   ],
 
   "platformDistribution": [
