@@ -6,7 +6,7 @@ import ReportAnalytics from './ReportAnalytics/ReportAnalytics'
 
 const Dashboard = () => {
   return (
-    <div className="bg-secondary w-full h-full rounded-[2.25rem] border-border-1 border p-6 z-0">
+    <div className="bg-secondary w-full h-full rounded-[1.75rem] sm:rounded-[2.25rem] border-border-1 border p-2 sm:p-6 z-0">
         <TopBar/>
         <TopSection/>
         <TopStats/>

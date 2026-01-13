@@ -105,12 +105,12 @@ const PlatformValue = () => {
       <div className="p-4 pb-0 mb-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center font-hubot gap-3">
-            <img src="/icons/dribbble.svg" alt="Dribbble" className="w-8 h-8" />
+            <img src="/icons/dribbble.svg" alt="Dribbble" className="w-6 h-6 sm:w-8 sm:h-8" />
             <div>
-              <div className="text-muted-foreground text-sm font-medium">
+              <div className="text-muted-foreground text-xs sm:text-sm font-medium">
                 Platform value
               </div>
-              <button className="flex items-center gap-1 text-foreground text-sm font-bold hover:opacity-80">
+              <button className="flex items-center gap-1 text-foreground text-xs sm:text-sm font-bold hover:opacity-80">
                 {platformData.platform}
                 <ChevronDown className="w-4 h-4 text-muted-foreground" />
               </button>
@@ -121,7 +121,7 @@ const PlatformValue = () => {
             {tabs.map((tab) => (
               <button
                 key={tab.id}
-                className={` px-4 py-2 rounded-xl text-sm font-medium  ${
+                className={` px-2 py-1 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm font-medium  ${
                   tab.id === 1
                     ? "bg-black text-white shadow-sm"
                     : "bg-muted text-muted-foreground hover:text-foreground transition-colors"
@@ -134,14 +134,17 @@ const PlatformValue = () => {
         </div>
       </div>
 
-      <div className="flex gap-4">
+      <div className="flex flex-col sm:flex-row sm:gap-4">
 
-        <div className="relative bg-accent w-fit p-6 text-secondary flex justify-between rounded-se-4xl">
-          <p className="absolute h-fit text-white/20 font-hubot font-medium whitespace-nowrap -rotate-90 top-24 right-17">
+        <div className="relative bg-accent w-full sm:w-fit p-6  text-secondary flex flex-col sm:flex-row justify-between rounded-b-2xl sm:rounded-none sm:rounded-se-4xl pt-8 sm:pt-6">
+          <p className="absolute h-fit text-white/20 font-hubot font-medium whitespace-nowrap -rotate-90 top-24 right-17 hidden sm:block">
+            Average monthly
+          </p>
+          <p className="absolute bg-card text-foreground text-sm sm:text-base h-fit font-hubot font-medium whitespace-nowrap sm:hidden top-0 left-0 px-4 py-1 rounded-ee-md">
             Average monthly
           </p>
 
-          <div className="flex flex-col gap-4 w-full h-full ml-9 font-hubot font-medium">
+          <div className="flex sm:flex-col gap-4 w-full h-full ml-7 sm:ml-9 font-hubot font-medium">
             <div>
               <div className="text-white/50 text-sm">Revenue</div>
               <div className="text-sm font-bold">
@@ -171,7 +174,7 @@ const PlatformValue = () => {
           </div>
         </div>
 
-        <div className="flex-1 min-w-0 pr-4 font-hubot">
+        <div className="flex-1 min-w-0 px-4 sm: px-0 sm:pr-4  font-hubot">
           <ChartContainer config={chartConfig} className="w-full h-full">
             <BarChart
               data={chartData}

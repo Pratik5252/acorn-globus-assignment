@@ -5,7 +5,7 @@ import Navbar from "./components/shared/Navbar/Navbar"
 
 const App = () => {
   return (
-    <div className="w-full h-full flex flex-col items-start justify-center p-4 pl-1">
+    <div className="w-full h-full flex flex-col items-start justify-center p-2 md:p-4 md:pl-1">
       <Navbar/>
       <Dashboard/>
     </div>
