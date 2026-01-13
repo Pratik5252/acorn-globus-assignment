@@ -18,9 +18,9 @@ const TopSection = () => {
     .find((subitem) => subitem.isActive === true);
 
   return (
-    <div className="flex justify-between py-3.5">
-      <p className="text-[1.75rem] text-secondary-foreground font-hubot font-semibold">{activeItem?.title}</p>
-      <div className="h-fit flex items-center justify-center gap-3">
+    <div className="flex flex-col sm:flex-row justify-between py-3.5">
+      <p className="text-[2rem] sm:text-[1.75rem] text-secondary-foreground font-hubot font-semibold">{activeItem?.title}</p>
+      <div className="h-fit flex items-center gap-3 mt-3 sm:mt-0">
         <div className="flex items-center space-x-2">
           <Switch id="timeframe" defaultChecked={true} />
           <label htmlFor="timeframe" className="font-hubot text-sm">

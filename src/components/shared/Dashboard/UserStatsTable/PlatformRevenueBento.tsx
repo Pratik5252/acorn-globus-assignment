@@ -23,9 +23,9 @@ const PlatformRevenueBento: React.FC<PlatformRevenueBentoProps> = ({
   platformDistribution,
 }) => {
   return (
-    <div className="w-full h-36 flex gap-1">
+    <div className="w-full h-auto md:h-36 flex flex-col md:flex-row gap-1">
       {/* Left Part */}
-      <div className=" w-[calc(100%-2rem)] h-full bg-card-2 rounded-xl flex ">
+      <div className="w-full md:w-[calc(50%-0.125rem)] min-h-[150px] md:min-h-full bg-card-2 rounded-xl flex">
         <div className="flex-1 p-2.5 pb-1 flex flex-col justify-between">
           <div className="flex items-center gap-2">
             <img
@@ -60,9 +60,9 @@ const PlatformRevenueBento: React.FC<PlatformRevenueBentoProps> = ({
         />
       </div>
       {/* Right Part */}
-      <div className="w-full h-full flex flex-col gap-1">
+      <div className="w-full md:w-1/2 h-full flex flex-col gap-1">
         <div className="w-full h-full flex gap-1">
-          <div className=" w-1/2 h-full bg-card-2 rounded-xl p-2.5 pb-1 flex flex-col justify-between">
+          <div className=" w-1/2 h-[vh] bg-card-2 rounded-xl p-2.5 pb-1 flex flex-col justify-between">
             <div className="flex items-center gap-2">
               <img
                 src={platformIcons.Instagram}

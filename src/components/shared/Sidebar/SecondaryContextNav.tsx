@@ -104,7 +104,7 @@ const CollapsibleSection = ({ title, items }: SectionData) => (
 
 const SecondaryContextNav = () => {
   return (
-    <Sidebar collapsible="none" className="hidden flex-1 md:flex">
+    <Sidebar collapsible="none" className=" flex-1 md:flex">
       <SidebarHeader className="p-4 py-6">
         <button className="flex items-center gap-1 font-semibold text-sm hover:opacity-80 transition-opacity">
           Codename.com

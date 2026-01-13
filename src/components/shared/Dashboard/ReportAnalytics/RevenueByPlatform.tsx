@@ -27,7 +27,7 @@ const RevenueByPlatform = () => {
         {platforms.map((platform) => (
           <div
             key={platform.name}
-            className="h-fit bg-card-2 p-3 py-2.5 flex items-center justify-between text-center shadow-xs rounded-lg gap-1"
+            className="bg-card-2 p-3 py-2.5 flex items-center justify-between text-center shadow-xs rounded-lg gap-1 flex-1"
           >
             <div className="flex items-center gap-2">
               <div className="flex items-center justify-center">

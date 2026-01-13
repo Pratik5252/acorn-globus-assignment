@@ -111,7 +111,7 @@ const DealsAmountChart = () => {
       </div>
 
       <div className="flex-1 w-full">
-        <ChartContainer config={chartConfig} className="w-full h-fit">
+        <ChartContainer config={chartConfig} className="w-full h-full">
           <BarChart data={chartData} margin={{ top: 0, right: 0, bottom: 0, left: 0 }} barGap={0} barCategoryGap="0%">
             <defs>
               <pattern id="stripePattern" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
