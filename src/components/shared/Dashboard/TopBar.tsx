@@ -13,8 +13,8 @@ const { users }: { users: User[] } = data;
 
 const TopBar = () => {
   return (
-    <div className="h-fit flex justify-between items-center mb-2">
-      <div className="flex items-center gap-3">
+    <div className="h-fit flex flex-wrap justify-between items-center mb-2 gap-2">
+      <div className="flex items-center gap-1 sm:gap-3 overflow-x-auto pb-1">
         <TooltipWrapper content="Add member">
           <button className="bg-pill flex items-center justify-center border-2 border-border-2/50 rounded-full p-1 hover:bg-pill/20 cursor-pointer">
             <Plus size={16} strokeWidth={1.5} className="text-primary" />
@@ -32,7 +32,7 @@ const TopBar = () => {
               className="w-5 h-5 rounded-full"
             />
             {!user.isTeam && (
-              <p className="text-foreground text-xs mr-2 font-medium leading-0 font-hubot">
+              <p className="text-foreground text-xs mr-2 font-medium leading-0 font-hubot whitespace-nowrap">
                 {user.name}
               </p>
             )}
