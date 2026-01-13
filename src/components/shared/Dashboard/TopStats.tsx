@@ -43,9 +43,9 @@ const TopStats = () => {
           <ChevronDown className="w-3 h-3" />
         </button>
       </div>
-      <div className="flex flex-col sm:flex-row justify-between gap-4 mt-2 sm:mt-0">
-        <div className="flex items-stretch gap-2">
-          <div className="relative min-w-[140px] h-fit p-2 bg-card-2 flex flex-col justify-between border-2 border-border-2/50 rounded-md gap-1 overflow-visible">
+      <div className="flex flex-col sm:flex-row justify-between gap-4 mt-2 sm:mt-0 w-full lg:w-auto">
+        <div className="flex items-stretch gap-2 w-full sm:w-auto">
+          <div className="relative min-w-[140px] flex-1 sm:flex-none h-fit p-2 bg-card-2 flex flex-col justify-between border-2 border-border-2/50 rounded-md gap-1 overflow-visible">
             <div className="absolute w-[calc(100%_-_0.75rem)] h-[calc(100%_+_0.75rem)] bg-border-2/30 rounded-md -top-1.5 left-1.5 -z-10" />
             <div className="flex items-center justify-between gap-2">
               <span className="text-xs text-muted-foreground font-medium">
@@ -70,7 +70,7 @@ const TopStats = () => {
             </div>
           </div>
 
-          <div className="relative min-w-[140px] h-fit p-2 bg-card-foreground flex flex-col justify-between border-2 border-border-2/30 rounded-md gap-1">
+          <div className="relative min-w-[140px] flex-1 sm:flex-none h-fit p-2 bg-card-foreground flex flex-col justify-between border-2 border-border-2/30 rounded-md gap-1">
             <div className="absolute w-[calc(100%_-_0.75rem)] h-[calc(100%_+_0.75rem)] bg-border-2/50 rounded-md -top-1.5 left-1.5 -z-10" />
             <div className="flex items-center justify-between gap-2">
               <span className="text-xs text-muted-foreground font-medium">
@@ -94,14 +94,14 @@ const TopStats = () => {
           </div>
         </div>
 
-        <div className="flex items-stretch gap-2">
+        <div className="flex items-stretch gap-2 w-full sm:w-auto">
           {kpiCards.map((card) => {
             const isHighlighted = card.highlighted;
 
             return (
               <div
                 key={card.id}
-                className={`w-[80px] h-fit p-2 flex flex-col items-center justify-between rounded-lg border-2 gap-1.5 font-hubot font-medium shadow-xs ${
+                className={`w-full sm:w-[80px] h-fit p-2 flex flex-col items-center justify-between rounded-lg border-2 gap-1.5 font-hubot font-medium shadow-xs ${
                   isHighlighted ? "bg-none text-foreground border-accent" : "bg-card-2 border-border-2/50"
                 }`}
               >

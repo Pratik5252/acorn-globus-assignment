@@ -15,10 +15,10 @@ const ContributionGraph = () => {
             key={user.id}
             className={`h-fit ${
               user.isTeam
-                ? "bg-none min-w-[120px] sm:w-40"
+                ? "bg-none sm:w-40"
                 : "bg-card-2 shadow-xs min-w-fit flex-1 sm:flex-[var(--percentage)]"
             } ${
-              index >= 3 ? "hidden sm:flex" : "flex"
+              index >= 3 ? "hidden xs:flex" : "flex"
             } rounded-full items-center justify-between px-1 py-0.5 sm:px-1.5 sm:py-1  overflow-hidden whitespace-nowrap`}
             style={user.isTeam ? {} : { "--percentage": user.percentage } as React.CSSProperties}
           >
