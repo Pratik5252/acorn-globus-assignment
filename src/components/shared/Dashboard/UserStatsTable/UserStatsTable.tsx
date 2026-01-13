@@ -38,7 +38,7 @@ const UserStatsTable = () => {
   };
 
   return (
-    <div className="w-1/2 h-fit overflow-hidden font-hubot">
+    <div className="w-full xl:w-1/2 h-fit overflow-hidden font-hubot">
       <Table className="border-separate border-spacing-0">
         <TableHeader>
           <TableRow className="!border-b-0 border-0">
@@ -50,7 +50,7 @@ const UserStatsTable = () => {
                 {item}
               </TableHead>
             ))}
-            <TableHead className="w-10 pb-2 h-auto border-0"></TableHead>
+            <TableHead className="w-10 pb-2 h-auto border-0 hidden sm:block"></TableHead>
           </TableRow>
         </TableHeader>
 
@@ -64,7 +64,7 @@ const UserStatsTable = () => {
               <tbody
                 className={`group transition-all ${
                   openRowId === user.id
-                    ? "bg-linear-to-r from-card-2 to-[#ffeaf2]"
+                    ? "bg-[linear-gradient(135deg,var(--color-card-2)_0%,#ffeaf2_60%)]"
                     : "bg-card-2"
                 }`}
               >
@@ -86,47 +86,47 @@ const UserStatsTable = () => {
                         <img
                           src={user.avatar}
                           alt={user.name}
-                          className="w-6 h-6 rounded-full object-cover"
+                          className="w-6 h-6 rounded-full object-cover "
                         />
                       </div>
-                      <span className="font-medium text-sm text-foreground">
+                      <span className="font-medium text-xs sm:text-sm text-foreground hidden sm:block">
                         {user.name}
                       </span>
                     </div>
                   </TableCell>
 
                   {/* Revenue */}
-                  <TableCell className="font-medium text-sm py-1.5">
+                  <TableCell className="font-medium text-xs sm:text-sm py-1.5">
                     ${user.revenue.toLocaleString()}
                   </TableCell>
 
                   {/* Sales + Leads */}
                   <TableCell className="py-1.5">
                     <div className="flex items-center gap-2">
-                      <span className="bg-foreground text-secondary text-xs font-medium px-2.5 py-1 rounded-full">
+                      <span className="bg-foreground text-secondary text-xs font-medium px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full">
                         {user.sales}
                       </span>
-                      <span className="bg-muted text-foreground text-xs font-medium px-2.5 py-1 rounded-full">
+                      <span className="bg-muted text-foreground text-xs font-medium px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full">
                         {user.leads}
                       </span>
                     </div>
                   </TableCell>
 
                   {/* KPI */}
-                  <TableCell className="text-sm text-foreground font-medium py-1.5">
+                  <TableCell className="text-xs sm:text-smtext-foreground font-medium py-1.5">
                     {user.kpi?.toFixed(2)}
                   </TableCell>
 
                   {/* W/L */}
                   <TableCell className="py-1.5">
                     <div className="flex items-center gap-1.5">
-                      <span className="text-sm text-foreground font-medium">
+                      <span className="text-xs sm:text-sm text-foreground font-medium">
                         {user.winRate}
                       </span>
-                      <span className="bg-foreground text-secondary text-xs font-medium px-2.5 py-1 rounded-full min-w-8 text-center">
+                      <span className="bg-foreground text-secondary text-xs font-medium px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full min-w-8 text-center">
                         {user.closed}
                       </span>
-                      <span className="bg-muted text-foreground text-xs font-medium px-2.5 py-1 rounded-full">
+                      <span className="bg-muted text-foreground text-xs font-medium px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full">
                         {user.pending}
                       </span>
                     </div>
