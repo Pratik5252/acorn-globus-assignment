@@ -95,7 +95,7 @@ const TopStats = () => {
       </div>
 
       <div className="flex items-stretch gap-2">
-        {kpiCards.map((card, index) => {
+        {kpiCards.map((card) => {
           const isHighlighted = card.highlighted;
 
           return (

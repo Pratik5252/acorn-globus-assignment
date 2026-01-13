@@ -1,5 +1,5 @@
 import { ChevronDown, AlignLeft, ListFilter, ShoppingBag } from "lucide-react";
-import { Bar, BarChart, LabelList, Rectangle } from "recharts";
+import { Bar, BarChart, LabelList } from "recharts";
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 
 const chartData = [

@@ -1,5 +1,5 @@
 import dashboardData from "@/data/dashboard.json";
-import { AlignLeft, ChevronDown, Filter, ListFilter } from "lucide-react";
+import { AlignLeft, ChevronDown, ListFilter } from "lucide-react";
 
 const RevenueByPlatform = () => {
   const { platforms } = dashboardData;

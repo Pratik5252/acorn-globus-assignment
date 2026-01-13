@@ -1,7 +1,6 @@
 import { Download, Plus, Settings2, Share } from "lucide-react";
 import data from "../../../data/dashboard.json";
 import type { User } from "@/types";
-import { Button } from "@/components/ui/button";
 import TooltipWrapper from "@/components/utils/TooltipWrapper";
 
 const UserOptions = [

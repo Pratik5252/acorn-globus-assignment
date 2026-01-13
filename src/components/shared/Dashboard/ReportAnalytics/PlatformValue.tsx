@@ -9,8 +9,6 @@ import {
 } from "recharts";
 import {
   ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
 } from "@/components/ui/chart";
 import dashboardData from "@/data/dashboard.json";
 
@@ -48,15 +46,6 @@ const PlatformValue = () => {
     });
     return entry;
   });
-
-  // Helper to format currency
-  const formatCurrency = (val: number) => {
-    return new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      maximumFractionDigits: 0,
-    }).format(val);
-  };
 
   const chartConfig = {
     user1: { label: "User 1", color: "#e6e6e6" },

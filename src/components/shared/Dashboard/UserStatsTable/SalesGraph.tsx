@@ -3,6 +3,7 @@ import { ChevronUp, ArrowUpRight, ChevronDown, Star } from "lucide-react";
 import { ChartContainer } from "@/components/ui/chart";
 import dashboardData from "@/data/dashboard.json";
 import type { User } from "@/types";
+import TooltipWrapper from "@/components/utils/TooltipWrapper";
 
 const SalesGraph = ({user}: {user: User}) => {
   const chartConfig = {
@@ -14,7 +15,9 @@ const SalesGraph = ({user}: {user: User}) => {
       <div className="flex items-center justify-between mb-1">
         <h4 className="text-sm font-medium text-foreground">Sales dynamic</h4>
         <button className="w-6 h-6 rounded-full flex items-center justify-center hover:bg-muted/80 transition-colors">
+        <TooltipWrapper content="expand">
           <ArrowUpRight className="w-4 h-4 text-foreground" />
+        </TooltipWrapper>
         </button>
       </div>
       <div className="h-24 w-full">
