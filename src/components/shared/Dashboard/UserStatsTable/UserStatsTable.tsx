@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { ChevronUp, ArrowUpRight, ChevronsUp } from "lucide-react";
-import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
+import { ChevronUp, ChevronsUp } from "lucide-react";
 import {
   Table,
-  TableBody,
   TableCell,
   TableHead,
   TableHeader,
@@ -14,18 +12,9 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { ChartContainer } from "@/components/ui/chart";
 import dashboardData from "@/data/dashboard.json";
 import PlatformRevenueBento from "./PlatformRevenueBento";
-
-// Platform icons mapping
-const platformIcons: Record<string, string> = {
-  Dribbble: "/icons/dribbble.svg",
-  Instagram: "/icons/instagram.svg",
-  Google: "/icons/google.svg",
-  Medium: "/icons/medium.svg",
-  Other: "/icons/other.svg",
-};
+import SalesGraph from "./SalesGraph";
 
 const tableHeadItem = ["Sales", "Revenue", "Leads", "KPI", "W/L"];
 
@@ -43,11 +32,6 @@ const UserStatsTable = () => {
   });
 
   const platformDistribution = dashboardData.platformDistribution;
-  const salesDynamic = dashboardData.salesDynamic;
-
-  const chartConfig = {
-    value: { label: "Value", color: "#d6255d" },
-  };
 
   const toggleRow = (id: number) => {
     setOpenRowId(openRowId === id ? null : id);
@@ -210,80 +194,18 @@ const UserStatsTable = () => {
                             )}
                           </div>
 
+                          {/* Platform Revenue Bento */}
                           <PlatformRevenueBento
                             platformDistribution={platformDistribution}
                           />
                         </div>
 
                         {/* Sales dynamic chart */}
-                        <div>
-                          <div className="flex items-center justify-between mb-1">
-                            <h4 className="text-sm font-medium text-foreground">
-                              Sales dynamic
-                            </h4>
-                            <button className="w-6 h-6 rounded-full flex items-center justify-center hover:bg-muted/80 transition-colors">
-                              <ArrowUpRight className="w-4 h-4 text-foreground" />
-                            </button>
-                          </div>
-                          <div className="h-24 w-full">
-                            <ChartContainer
-                              config={chartConfig}
-                              className="w-full h-full"
-                            >
-                              <LineChart
-                                data={salesDynamic}
-                                margin={{
-                                  top: 5,
-                                  right: 10,
-                                  bottom: 5,
-                                  left: 10,
-                                }}
-                              >
-                                <CartesianGrid
-                                  horizontal={false}
-                                  vertical={true}
-                                  stroke="#e5e7eb"
-                                />
-                                <XAxis
-                                  dataKey="week"
-                                  tickLine={false}
-                                  axisLine={false}
-                                  tick={{ fontSize: 10, fill: "#9ca3af" }}
-                                  interval={3}
-                                  orientation="top"
-                                  tickMargin={10}
-                                />
-                                
-                                <Line
-                                  type="bump"
-                                  dataKey="previous"
-                                  stroke="#e5b8b7"
-                                  strokeWidth={1}
-                                  strokeDasharray="4 4"
-                                  dot={false}
-                                />
-                                <Line
-                                  type="bump"
-                                  dataKey="value"
-                                  stroke="#d6255d"
-                                  strokeWidth={1}
-                                  dot={false}
-                                />
-                              </LineChart>
-                            </ChartContainer>
-                          </div>
-                          {/* Platform icons on timeline */}
-                          <div className="relative mt-1 mb-2 px-1">
-                            {/* Gradient Line */}
-                            <div className="w-full h-1.5 rounded-full bg-linear-to-r from-[#e68a73] via-[#e3e58c] to-[#86d792]" />
-                          </div>
-                        </div>
+                        <SalesGraph user={user} />
                       </div>
                     </td>
                   </tr>
                 </CollapsibleContent>
-
-                {/* Spacer Row */}
               </tbody>
             </Collapsible>
 
