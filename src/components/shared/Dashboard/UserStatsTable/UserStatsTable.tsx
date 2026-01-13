@@ -54,7 +54,7 @@ const UserStatsTable = () => {
           </TableRow>
         </TableHeader>
 
-        {sortedUsers.map((user) => (
+        {sortedUsers.map((user, index) => (
           <div className="contents" key={user.id}>
             <Collapsible
               open={openRowId === user.id}
@@ -210,11 +210,13 @@ const UserStatsTable = () => {
             </Collapsible>
 
             {/* Spacer Body */}
-            <tbody className="border-0 bg-transparent">
-              <tr className="h-2 border-0 bg-transparent">
-                <td colSpan={6} className="p-0 border-0"></td>
-              </tr>
-            </tbody>
+            {index < sortedUsers.length - 1 && (
+              <tbody className="border-0 bg-transparent">
+                <tr className="h-2 border-0 bg-transparent">
+                  <td colSpan={6} className="p-0 border-0"></td>
+                </tr>
+              </tbody>
+            )}
           </div>
         ))}
       </Table>
